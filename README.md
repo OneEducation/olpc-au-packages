@@ -16,10 +16,10 @@ What is it for?
 How do I build a package?
 ----------------
 
-To generate packages, simply specify the name of the package.
+To generate packages, simply specify the spec file.
 
 ```
-./build sugar
+./build specs/sugar.spec
 ```
 
 How does it work?

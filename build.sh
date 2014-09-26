@@ -16,8 +16,7 @@
 # along with this program; if not, write to the Free Software
 # Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301 USA
 
-package=$1
-spec=$package/$package.spec
+spec=$1
 
 if [ ! -f $spec ]; then
     echo "[ERROR]: "$spec" no found."
