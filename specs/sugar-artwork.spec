@@ -8,6 +8,7 @@ License:  ASL 2.0
 Source0: sugar-artwork-0.102.0.tar
 
 #GitUrl: https://github.com/OneEducation/sugar-artwork.git
+#GitBranch: au2a
 #GitCommit: 07e2ebd4f46d9443886d20019f9b477b6acacc9e
 
 BuildRequires: gtk2-devel

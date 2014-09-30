@@ -8,6 +8,7 @@ Group:   User Interface/Desktops
 Source0: olpc-au-configs-0.2.tar
 
 #GitUrl: https://github.com/OneEducation/olpc-au-configs.git
+#GitBranch: master
 #GitCommit: 8c0d4872f31394cde7073b5b32f654f8b61e5ce6
 
 Requires: sugar >= 0.101

@@ -10,6 +10,7 @@ License: LGPLv2+
 Group: System Environment/Libraries
 
 #GitUrl: https://github.com/OneEducation/sugar-toolkit.git
+#GitBranch: au2a
 #GitCommit: 08bcf8c93edbbb532309e9e8bbcb16b6b8d242d7
 
 BuildRequires: alsa-lib-devel

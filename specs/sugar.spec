@@ -10,6 +10,7 @@ Group:   User Interface/Desktops
 Source0: sugar-0.102.0.tar
 
 #GitUrl: https://github.com/OneEducation/sugar.git
+#GitBranch: au2a
 #GitCommit: 39d3d75f2bf7a196d4b098e60aeeb0677e2adfc9
 
 BuildRequires: gettext

@@ -9,6 +9,7 @@ URL:           http://maliit.org/
 Source0:       maliit-plugins-0.94.2.tar
 
 #GitUrl: https://github.com/tchx84/plugins.git
+#GitBranch: au2a
 #GitCommit: 776341fe06a2e56ea04c7edb111dafeec7d732f6
 
 BuildRequires: dbus-devel

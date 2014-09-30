@@ -24,26 +24,25 @@ if [ ! -f $spec ]; then
 fi
 
 echo "[INFO] Reading package from "$spec"."
-name=$(grep "Name:" $spec | awk '{print $2;}')
-version=$(grep "Version:" $spec | awk '{print $2;}')
 tarball=$(grep "Source0:" $spec | awk '{print $2;}')
 
 url=$(grep "GitUrl:" $spec | awk '{print $2;}')
+branch=$(grep "GitBranch:" $spec | awk '{print $2;}')
 commit=$(grep "GitCommit:" $spec | awk '{print $2;}')
 
-echo $name
-echo $version
 echo $tarball
 echo $url
+echo $branch
 echo $commit
 
 rm -rf ./tmp > /dev/null 2>&1
 mkdir ./tmp > /dev/null 2>&1
 cd ./tmp/
 
-    git clone $url $name-$version
+    name=${tarball%.*}
+    git clone -b $branch --single-branch $url $name
 
-    cd $name-$version
+    cd $name
 
         git reset --hard $commit
         rm -rf .git/
@@ -56,7 +55,7 @@ cd ./tmp/
     cd ../
 
     echo "[INFO] Creating tarball."
-    tar -cvf $tarball $name-$version > /dev/null 2>&1
+    tar -cvf $tarball $name > /dev/null 2>&1
     mv $tarball ${HOME}/rpmbuild/SOURCES/
 
 cd ../
