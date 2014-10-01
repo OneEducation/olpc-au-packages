@@ -17,6 +17,7 @@ Requires: olpc-powerd
 Requires: gstreamer-plugins-vmetaxv, gstreamer-plugins-marvell-mmp3, libvmeta, libphycontmem
 Requires: tuxmath, tuxpaint, tuxpaint-stamps
 Requires: art4apps, art4apps-images, art4apps-audio-en
+Requires: cntlm
 
 BuildArch: noarch
 
@@ -36,6 +37,9 @@ cp -r %{_builddir}/%{name}-%{version}/* %{buildroot}
 %{_datadir}/*
 
 %post
+# enable cntlm
+/bin/systemctl enable cntlm
+
 # re-write powerd.conf file with olpcau tweaked version
 cp /etc/powerd/powerd.conf.olpcau /etc/powerd/powerd.conf
 
