@@ -14,6 +14,10 @@ Source0: olpc-au-configs-0.2.tar
 Requires: sugar >= 0.101
 Requires: olpc-powerd
 
+Requires: gstreamer-plugins-vmetaxv, gstreamer-plugins-marvell-mmp3, libvmeta, libphycontmem
+Requires: tuxmath, tuxpaint, tuxpaint-stamps
+Requires: art4apps, art4apps-images, art4apps-audio-en
+
 BuildArch: noarch
 
 %description
