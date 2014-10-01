@@ -22,6 +22,7 @@ Requires: sugar-services
 Requires: harvest-client, harvest-tracker, harvest-monitor
 Requires: abc123
 Requires: icedtea-web
+Requires: dextrose-updater, sugar-alerts
 
 BuildArch: noarch
 
