@@ -66,6 +66,10 @@ gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults
 gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
     --type list --list-type string -s /desktop/sugar/services/zendesk/fields '[21891880,21729904,21729914,21808844]'
 
+# Browse home page
+gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    -s -t string /desktop/sugar/browser/home_page "file:///usr/share/sugar/data/browse/index.html"
+
 #enable harvest-monitor
 /bin/systemctl enable harvest-monitor
 
