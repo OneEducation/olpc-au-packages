@@ -58,6 +58,14 @@ gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults
 gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
     --type string -s /desktop/sugar/services/training/api_key REPLACE_TRAINING_KEY
 
+# support server configuration
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type=string -s /desktop/sugar/services/zendesk/url https://oneedu.zendesk.com
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type=string -s /desktop/sugar/services/zendesk/token REPLACE_SUPPORT_KEY
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type list --list-type string -s /desktop/sugar/services/zendesk/fields '[21891880,21729904,21729914,21808844]'
+
 #enable harvest-monitor
 /bin/systemctl enable harvest-monitor
 
