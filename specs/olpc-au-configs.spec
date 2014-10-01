@@ -70,6 +70,10 @@ gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults
 gconftool-2 --direct --config-source=xml:readwrite:/etc/gconf/gconf.xml.defaults \
     -s -t string /desktop/sugar/browser/home_page "file:///usr/share/sugar/data/browse/index.html"
 
+# enable control panel network hidden network section
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    -s --type boolean /desktop/sugar/extensions/network/conf_hidden_ssid true
+
 #enable harvest-monitor
 /bin/systemctl enable harvest-monitor
 
