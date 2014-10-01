@@ -21,6 +21,7 @@ Requires: cntlm
 Requires: sugar-services
 Requires: harvest-client, harvest-tracker, harvest-monitor
 Requires: abc123
+Requires: icedtea-web
 
 BuildArch: noarch
 
