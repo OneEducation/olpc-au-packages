@@ -1,7 +1,7 @@
 Summary: Custom bits for OLPC AU
 Name:    olpc-au-configs
 Version: 0.2
-Release: 1
+Release: 2
 URL:     https://www.laptop.org.au/
 License: LGPL
 Group:   User Interface/Desktops
