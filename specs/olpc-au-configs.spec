@@ -52,6 +52,12 @@ gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults
 gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
     --type string -s /desktop/sugar/collaboration/harvest_reponame au2a-f20-testing
 
+# training server configuration
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type string -s /desktop/sugar/services/training/url https://training.one-education.org/training/report
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type string -s /desktop/sugar/services/training/api_key REPLACE_TRAINING_KEY
+
 #enable harvest-monitor
 /bin/systemctl enable harvest-monitor
 
