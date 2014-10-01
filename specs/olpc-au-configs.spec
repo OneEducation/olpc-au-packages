@@ -20,6 +20,7 @@ Requires: art4apps, art4apps-images, art4apps-audio-en
 Requires: cntlm
 Requires: sugar-services
 Requires: harvest-client, harvest-tracker, harvest-monitor
+Requires: abc123
 
 BuildArch: noarch
 
