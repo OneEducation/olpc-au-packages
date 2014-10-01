@@ -19,7 +19,7 @@ Requires: tuxmath, tuxpaint, tuxpaint-stamps
 Requires: art4apps, art4apps-images, art4apps-audio-en
 Requires: cntlm
 Requires: sugar-services
-
+Requires: harvest-client, harvest-tracker, harvest-monitor
 
 BuildArch: noarch
 
@@ -39,6 +39,21 @@ cp -r %{_builddir}/%{name}-%{version}/* %{buildroot}
 %{_datadir}/*
 
 %post
+export GCONF_CONFIG_SOURCE=`gconftool-2 --get-default-source`
+
+# harvest service configuration
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type string -s /desktop/sugar/collaboration/harvest_api_key REPLACE_HARVEST_KEY
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type string -s /desktop/sugar/collaboration/harvest_hostname https://harvest.one-education.org
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type boolean -s /desktop/sugar/collaboration/harvest_editable false
+gconftool-2 --direct --config-source xml:readwrite:/etc/gconf/gconf.xml.defaults \
+    --type string -s /desktop/sugar/collaboration/harvest_reponame au2a-f20-testing
+
+#enable harvest-monitor
+/bin/systemctl enable harvest-monitor
+
 # enable cntlm
 /bin/systemctl enable cntlm
 
