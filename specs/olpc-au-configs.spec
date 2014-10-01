@@ -18,6 +18,8 @@ Requires: gstreamer-plugins-vmetaxv, gstreamer-plugins-marvell-mmp3, libvmeta, l
 Requires: tuxmath, tuxpaint, tuxpaint-stamps
 Requires: art4apps, art4apps-images, art4apps-audio-en
 Requires: cntlm
+Requires: sugar-services
+
 
 BuildArch: noarch
 
