@@ -1,7 +1,7 @@
 Summary: Custom bits for OLPC AU
 Name:    olpc-au-configs
 Version: 0.2
-Release: 2
+Release: 3
 URL:     https://www.laptop.org.au/
 License: LGPL
 Group:   User Interface/Desktops
@@ -9,7 +9,7 @@ Source0: olpc-au-configs-0.2.tar
 
 #GitUrl: https://github.com/OneEducation/olpc-au-configs.git
 #GitBranch: master
-#GitCommit: 8c0d4872f31394cde7073b5b32f654f8b61e5ce6
+#GitCommit: b4e991e8c2244454270c4b06872a474923bfe6a7
 
 Requires: sugar >= 0.101
 Requires: olpc-powerd
