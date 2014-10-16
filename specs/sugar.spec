@@ -3,7 +3,7 @@
 Summary: Constructionist learning platform
 Name:    sugar
 Version: 0.102.0
-Release: 1%{?dist}.olpcau1
+Release: 1%{?dist}.olpcau2
 URL:     http://sugarlabs.org/
 License: GPLv2+
 Group:   User Interface/Desktops
@@ -11,7 +11,7 @@ Source0: sugar-0.102.0.tar
 
 #GitUrl: https://github.com/OneEducation/sugar.git
 #GitBranch: au2a
-#GitCommit: 39d3d75f2bf7a196d4b098e60aeeb0677e2adfc9
+#GitCommit: 761fa69fdedfba0ab985d1a4a5198e1c25c22e06
 
 BuildRequires: gettext
 BuildRequires: GConf2-devel
